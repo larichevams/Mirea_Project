@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:fontFamily="serif"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textColor="#212121"
+            android:gravity="fill_horizontal"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/text1"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fingerprintmap" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textColor="#212121"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/text2"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fingerprintonpaper" />
+
+    </LinearLayout>
+</FrameLayout>
