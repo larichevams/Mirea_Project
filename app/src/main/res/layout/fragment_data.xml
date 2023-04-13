@@ -16,17 +16,6 @@
         android:background="#FFFFFF">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#607D8B"
-            android:fontFamily="serif"
-            android:text="@string/hello_blank_fragment"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="28sp" />
-
-        <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

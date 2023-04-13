@@ -33,4 +33,10 @@
         android:name="ru.mirea.laricheva.mireaproject.DataFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="ru.mirea.laricheva.mireaproject.ServiceFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_service" />
 </navigation>

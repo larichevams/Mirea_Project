@@ -15,7 +15,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#455A64"
             app:popupTheme="@style/Theme.MireaProject.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -29,8 +28,6 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        android:background="#FF9800"
-        app:rippleColor="#FF9800"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
