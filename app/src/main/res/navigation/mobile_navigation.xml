@@ -9,7 +9,7 @@
         android:id="@+id/nav_auth"
         android:name="ru.mirea.laricheva.mireaproject.AuthFragment"
         android:label="Authentication Fragment"
-        tools:layout="@layout/fragment_auth" />
+        tools:layout="@layout/activity_auth" />
 
     <fragment
         android:id="@+id/nav_browser"
@@ -58,4 +58,10 @@
         android:name="ru.mirea.laricheva.mireaproject.FileFragment"
         android:label="File Fragment"
         tools:layout="@layout/fragment_file" />
+
+    <fragment
+        android:id="@+id/nav_temp"
+        android:name="ru.mirea.laricheva.mireaproject.TemperatureFragment"
+        android:label="Temperature Fragment"
+        tools:layout="@layout/fragment_temperature" />
 </navigation>

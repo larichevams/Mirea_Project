@@ -1,12 +1,13 @@
 package ru.mirea.laricheva.mireaproject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -16,16 +17,16 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-import ru.mirea.laricheva.mireaproject.databinding.FragmentAuthBinding;
+import ru.mirea.laricheva.mireaproject.databinding.ActivityAuthBinding;
 
 public class Auth extends AppCompatActivity {
-    private static final String TAG = Auth.class.getSimpleName();
-    private FragmentAuthBinding binding;
+    private static final String TAG = ru.mirea.laricheva.mireaproject.Auth.class.getSimpleName();
+    private ActivityAuthBinding binding;
     private FirebaseAuth mAuth;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = FragmentAuthBinding.inflate(getLayoutInflater());
+        binding = ActivityAuthBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // [START initialize_auth] Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -60,6 +61,14 @@ public class Auth extends AppCompatActivity {
                 updateUI(currentUser);
             }
         });
+
+        binding.toMainPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Auth.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // [START on_start_check_user]
@@ -82,6 +91,7 @@ public class Auth extends AppCompatActivity {
             binding.verButton.setVisibility(View.VISIBLE);
             binding.verButton.setEnabled(!user.isEmailVerified());
             binding.signOutButton.setVisibility(View.VISIBLE);
+            binding.toMainPageButton.setVisibility(View.VISIBLE);
         }
         else {
             binding.status.setText(R.string.signed_out);
@@ -90,6 +100,7 @@ public class Auth extends AppCompatActivity {
             binding.emailPasswordFields.setVisibility(View.VISIBLE);
             binding.signOutButton.setVisibility(View.GONE);
             binding.verButton.setVisibility(View.GONE);
+            binding.toMainPageButton.setVisibility(View.GONE);
         } }
     private void createAccount(String email, String password) {
         Log.d(TAG, "createAccount:" + email);
@@ -108,7 +119,7 @@ public class Auth extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure");
-                            Toast.makeText(Auth.this, "Authentication Failed.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ru.mirea.laricheva.mireaproject.Auth.this, "Authentication Failed.",Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         } }
                 });
@@ -127,7 +138,7 @@ public class Auth extends AppCompatActivity {
                 }
                 else {
                     // If sign in fails, display a message to the user. Log.w(TAG, "signInWithEmail:failure", task.getExcep-
-                    Toast.makeText(Auth.this, "Authentication Failed",
+                    Toast.makeText(ru.mirea.laricheva.mireaproject.Auth.this, "Authentication Failed",
                             Toast.LENGTH_SHORT).show(); updateUI(null);
                 }
                 // [START_EXCLUDE]
@@ -153,11 +164,11 @@ public class Auth extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) { // [START_EXCLUDE]
                         // Re-enable button
                         binding.verButton.setEnabled(true);
-                        if (task.isSuccessful()) { Toast.makeText(Auth.this,
+                        if (task.isSuccessful()) { Toast.makeText(ru.mirea.laricheva.mireaproject.Auth.this,
                                 "Verification email sent to " + user.getEmail(), Toast.LENGTH_SHORT).show();
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
-                            Toast.makeText(Auth.this,
+                            Toast.makeText(ru.mirea.laricheva.mireaproject.Auth.this,
                                     "Failed to send verification email.", Toast.LENGTH_SHORT).show();
                         }
                         // [END_EXCLUDE]
@@ -165,3 +176,4 @@ public class Auth extends AppCompatActivity {
         // [END send_email_verification]
     }
 }
+

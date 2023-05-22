@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ru.mirea.laricheva.mireaproject.databinding.FragmentAuthBinding;
+import ru.mirea.laricheva.mireaproject.databinding.ActivityAuthBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +22,7 @@ public class AuthFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private FragmentAuthBinding binding;
+    private ActivityAuthBinding binding;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -64,7 +64,7 @@ public class AuthFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         super.onCreate(savedInstanceState);
-        binding = FragmentAuthBinding.inflate(inflater, container, false);
+        binding = ActivityAuthBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         Intent intent = new Intent(getContext(), Auth.class);
         startActivity(intent);

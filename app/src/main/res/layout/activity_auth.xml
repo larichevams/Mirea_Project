@@ -125,7 +125,15 @@
             android:visibility="gone"
             android:background="@drawable/round_button" />
 
-
+        <Button
+            android:id="@+id/toMainPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="156dp"
+            android:text="Main page"
+            android:visibility="gone"
+            android:background="@drawable/round_button"/>
 
     </RelativeLayout>
 

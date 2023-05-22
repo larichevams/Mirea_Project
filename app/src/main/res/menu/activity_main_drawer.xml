@@ -47,5 +47,10 @@
             android:id="@+id/nav_auth"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Authentication" />
+
+        <item
+            android:id="@+id/nav_temp"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Temperature" />
     </group>
 </menu>
