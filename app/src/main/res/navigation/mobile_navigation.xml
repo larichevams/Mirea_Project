@@ -6,6 +6,12 @@
     app:startDestination="@+id/nav_data">
 
     <fragment
+        android:id="@+id/nav_auth"
+        android:name="ru.mirea.laricheva.mireaproject.AuthFragment"
+        android:label="Authentication Fragment"
+        tools:layout="@layout/fragment_auth" />
+
+    <fragment
         android:id="@+id/nav_browser"
         android:name="ru.mirea.laricheva.mireaproject.BrowserFragment"
         android:label="Browser Fragment"

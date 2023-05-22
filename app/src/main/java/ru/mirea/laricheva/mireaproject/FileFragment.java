@@ -1,9 +1,8 @@
 package ru.mirea.laricheva.mireaproject;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;

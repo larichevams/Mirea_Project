@@ -19,4 +19,22 @@
     <string name="text1">Дактилоскопи́я — способ опознания (идентификации) человека по следам пальцев рук (в том числе ладоней рук), основанный на неповторимости рисунка папиллярных линий кожи. Широко применяется в криминалистике. Основана на идеях англичанина Уильяма Гершеля, выдвинувшего в 1877 году гипотезу о неизменности папиллярного рисунка ладонных поверхностей кожи человека. Эта гипотеза стала результатом долгих исследований автора, служившего полицейским чиновником в Индии.</string>
     <string name="text2">В каждом отпечатке пальца можно определить два типа признаков — глобальные и локальные. \n Папиллярный узор. Область узора — выделенный фрагмент отпечатка, в котором локализованы все глобальные признаки. Ядро или центр — точка, локализованная в середине отпечатка или некоторой выделенной области. Пункт «дельта» — начальная точка. Место, в котором происходит разделение или соединение бороздок папиллярных линий, либо очень короткая бороздка (может доходить до точки). Тип линии — две наибольшие линии, которые начинаются как параллельные, а затем расходятся и огибают всю область образа. Счётчик линий — число линий на области образа, либо между ядром и пунктом «дельта».</string>
 
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate
+with Firebase.</string>
+    <string name="hint_user_id">User ID</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="firebase_status_fmt">Firebase UID: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified:
+%2$b)</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+    <string name="error_sign_in_failed">Sign in failed, see logs for de-
+tails.</string>
 </resources>
